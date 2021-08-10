@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="2"
+    android:background="#f0f0f0"
+    tools:context=".Result.DetailResultActivity">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/back_detail"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:translationZ="1dp"
+            android:src="@drawable/ic_back_outline"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginHorizontal="24dp">
+            <ImageView
+                android:id="@+id/detail_img_barang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/imgbarang"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@drawable/ic_home"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingVertical="18dp"
+        android:paddingHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_nama_barang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Barang"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32sp"/>
+        <TextView
+            android:id="@+id/txt_jenis_barang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Barang"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="-8dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/txt_deskripsi_barang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Deskiripsi Barang Deskiripsi Barang Deskiripsi Barang Deskiripsi Barang"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/l_harga"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_money"/>
+
+                <TextView
+                    android:id="@+id/txt_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:text="Rp.27.000"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l_stok"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_stock"/>
+                <TextView
+                    android:id="@+id/txt_stok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 27.000"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_date_in"/>
+            <TextView
+                android:id="@+id/txt_tgl_masuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masuk tgl 27 Februari 2021"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/other_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_other_scan"
+                android:paddingStart="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scan barang lain"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

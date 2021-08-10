@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scan.ScanActivity">
+
+    <TextView
+        android:text="Scanner Barang"
+        android:fontFamily="@font/poppins_semibold"
+        android:translationZ="1dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/scan_screen"
+        android:translationZ="1dp"/>
+
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFocusButtonColor="@color/red"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@color/red"
+        app:flashButtonVisible="true"
+        app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameColor="@color/white"
+        app:frameSize="1"
+        app:frameThickness="1dp"
+        app:maskColor="@color/white" />
+
+    <TextView
+        android:text="Arahkan kamera pada QR code atau Barcode untuk mendapatkan informasi barang"
+        android:fontFamily="@font/poppins"
+        android:translationZ="2dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp"
+        android:layout_marginBottom="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
